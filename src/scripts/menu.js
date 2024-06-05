@@ -1,8 +1,11 @@
 
-const hamburguer = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
 
-hamburguer.addEventListener("click", () => {
-    navLinks.classList.toggle("expanded");
-   hamburguer.classList.toggle("active");
+const handleHamburgerClick = () => {
+    document.querySelector(".nav-links").classList.toggle("expanded");
+    document.querySelector(".hamburger").classList.toggle("active");
+};
+
+document.addEventListener("astro:page-load", () => {
+    document.querySelector(".hamburger").addEventListener("click", handleHamburgerClick);
 });
+
