@@ -1,10 +1,49 @@
 ---
 import Navigation from './Navigation.astro';
 import Hamburger from './Hamburger.astro';
+import ThemeIcon from './ThemeIcon.astro';
 ---
 <header>
   <nav>
-    <Hamburger />
+    <div>
+      <Hamburger />
+      <ThemeIcon />
+    </div>
     <Navigation />
   </nav>
 </header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  @media (max-width: 800px) {
+    header {
+      padding: 1rem 0;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    nav {
+      display: block;
+    }
+  }
+</style>

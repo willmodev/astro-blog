@@ -20,6 +20,15 @@ h1 {
   font-size: 2.5rem;
 }
 
+html.dark {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark .nav-links a {
+  color: #e2e8f0;
+}
+
 
 /* estilos de la barra de navegación*/
 
@@ -95,4 +104,14 @@ h1 {
 
 .hamburger.active .line:nth-child(3) {
   opacity: 0;
+}
+
+.btn-greeting {
+  background-color: #ff9776;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
